@@ -19,13 +19,13 @@ Para un mejor entendimiento se usará el siguiente marcado para los elementos ad
 | `apt` | -- | ``|
 | `neofetch` | -- | ``|
 | `ip a` | -- | ``|
-| `clear` | -- | ``|
-| `pwd` | -- | ``|
+| `clear` | Limpia la pantalla de la consola, lo cual elimina todas las salidas de comandos anteriores a clear y el uso de clear en la consola. | `clear` Limpia la consola |
+| `pwd` | Muestra la ruta actual en la que se encuentra la consola | `pwd` Imprime la Ubicación actual de la sesión de la consola |
 | `ls [-l]` | -- | ``|
-| `man {command_name}` | -- | ``|
+| `man {command_name}` | Imprime el manual de usuario del comando ingresado por parámetro. Despliega tanto la documentación del comando o paquete como las opciones que tiene disponibles en cuanto argumentos u opciones del comando. | `man apt` Muestra el manual del comando apt |
 | `su root` | -- | ``|
 | `passwd` | -- | ``|
-| `whoami` | -- | ``|
+| `whoami` | Muestra el nombre de usuario que se está usando actualmente. | `whoami` Muestra el usuario actual |
 | `history` | -- | ``|
 | `nano` | -- | ``|
 | `vi` | -- | ``|
