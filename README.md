@@ -39,7 +39,7 @@ Para un mejor entendimiento se usará el siguiente marcado para los elementos ad
 | `top` | -- | ``|
 | `htop` | -- | ``|
 | `tree` | -- | ``|
-| ` ps [-a\|u\|x]` | -- | ``|
+| `ps [-a\|u\|x]` | -- | ``|
 | `python3` | -- | ``|
 | `chmod` | -- | ``|
 | `dmidecode` | -- | ``|
@@ -57,3 +57,11 @@ Para un mejor entendimiento se usará el siguiente marcado para los elementos ad
 | `zip` | -- | ``|
 | `unzip` | -- | ``|
 | `pwd` | -- | ``|
+| `curl [-X {GET/POST/DELETE}] [-P {puerto}] [-L]` | Herramienta para transferir datos hacia un servidor. Permite usar diferentes protocolos como HTTP, HTTPS, FTP, DICT, etc. Incluye una amplia variedad de opciones como elegir el puerto (-P), el método HTTP que se usará (-X) o incluso si debe ser sensible a que la dirección utilizada indique un cambio de url | `curl -L google.com` Obtiene los datos que devuelve la dirección de google.com admitiendo redireccionamiento de los recursos. |
+| `pacman {-D/Q/S[y] [paquete]/R}` | Comando correspondiente al administrador de paquetes de las distribuciones basadas en Arch Linux. Realiza operaciones como actualizar, instalar y desinstalar paquetes en la distribución | `sudo pacman -Sy` Actualiza la lista del paquetes del equipo |
+| `yay {-Y/B/P/G/W/S {paquete}}` | yay es un asistente de Pacman que permite instalar paquetes del Arch User Repository (AUR), por lo tanto tiene sus propias opciones, pero se extiende de Pacman como la operación -S para instalar paquetes. Por defecto si solo se usa `yay` usará la opción -Y | `sudo yay -S google-chrome` Instala el paquete de Google Chrome desde el AUR |
+| `systemctl {status/start/stop} {servicio}` | Este comando funciona para administrar los servicios del sistema operativo con operaciones para iniciar (start), detener (stop) o verificar el estado (status), entre otras. | `sudo systemctl start httpd` Inicia el servicio de Apache que muestra una página en localhost |
+| `{comando_con_salida} > {ruta_archivo}` | -- | ``|
+| `uname [-a/(s\|n\|r\|v\|m\|p)]` | Muestra cierta información del sistema como el nombre, version o release del kernel. La opción -a muestra todo, mientras que las otras corresponden a datos específicos | `uname -a` Muestra todos los datos del sistema disponibles en el comando |
+| `useradd [-m {nombre_usuario}] [-G {grupo}] [-p {clave}]` | Crea un usuario nuevo asignandole nombre, grupo y clave | `useradd -m pepe -G clients -p elpepe` Crea un nuevo usuario llamado pepe, asignado al grupo clients y con la clave elpepe |
+| `chown {usuario} {ruta}` | Cambia el usuario dueño de una carpeta o archivo | `chown pepe /home/admin/carpetapepe` Cambia el dueño de una carpeta ubicada en la carpeta home del usuario admin|
