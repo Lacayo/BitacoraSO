@@ -28,13 +28,13 @@ Para un mejor entendimiento se usará el siguiente marcado para los elementos ad
 | `whoami` | Muestra el nombre de usuario que se está usando actualmente. | `whoami` Muestra el usuario actual |
 | `history` | Muestra el historial de comandos utilizados en la consola en esta y anteriores sesiones con un límite de 1000 comandos, una vez alcanzado ese límite se borran las entradas más antiguas para ingresar los más recientes | `history` Imprime en consola la lista de comandos usados. |
 | `nano [archivo]` | Es un paquete que permite la edición de archivos de texto plano por medio de la consola. Si se coloca un archivo por parámetro lo abre y carga el contenido para edición, si no existe o no se coloca un archivo como parametro crea uno nuevo. En caso que no se colocó el nombre del archivo en el parámetro, lo solicita para guardar al final de la edición | `nano autorun.sh` Abre para modificar o crea un archivo autorun.sh |
-| `vi` | -- | ``|
-| `cat` | -- | ``|
+| `vi` | Hace lo mismo que nano, pero más feo | `vi test.txt` Carga el archivo para editarlo. |
+| `cat` | Imprime el contenido de un archivo de texto plano en consola | `cat autorun.sh` Muestra el contenido del archivo autorun.sh sin ejecutarlo |
 | `mkdir` | -- | ``|
-| `cd` | -- | ``|
-| `rm` | -- | ``|
-| `cp` | -- | ``|
-| `mv` | -- | ``|
+| `cd [ruta]` | -- | ``|
+| `rm {archivo}` | -- | ``|
+| `cp {archivo_original} {ruta_copia}` | -- | ``|
+| `mv {ruta_original} {ruta_nueva}` | -- | ``|
 | `telnet` | -- | ``|
 | `top` | -- | ``|
 | `htop` | -- | ``|
