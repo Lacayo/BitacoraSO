@@ -26,8 +26,8 @@ Para un mejor entendimiento se usará el siguiente marcado para los elementos ad
 | `su [usuario]` | Permite ejecutar comandos como otro usuario diferente al de la sesión actual del sistema. Si no se le coloca el argumento de usuario cambiará por defecto al usuario root. | `su root` Pasa a ejecutar comandos como el super usuario (root) |
 | `passwd [usuario]` | Permite cambiar las contraseñas de los usuarios. Solo el super usuario puede cambiar las contraseñas de otros usuarios, en caso contrario se cambiará la contraseña del usuario en sesión | `passwd` Cambia la contraseña del usuario actual |
 | `whoami` | Muestra el nombre de usuario que se está usando actualmente. | `whoami` Muestra el usuario actual |
-| `history` | -- | ``|
-| `nano` | -- | ``|
+| `history` | Muestra el historial de comandos utilizados en la consola en esta y anteriores sesiones con un límite de 1000 comandos, una vez alcanzado ese límite se borran las entradas más antiguas para ingresar los más recientes | `history` Imprime en consola la lista de comandos usados. |
+| `nano [archivo]` | Es un paquete que permite la edición de archivos de texto plano por medio de la consola. Si se coloca un archivo por parámetro lo abre y carga el contenido para edición, si no existe o no se coloca un archivo como parametro crea uno nuevo. En caso que no se colocó el nombre del archivo en el parámetro, lo solicita para guardar al final de la edición | `nano autorun.sh` Abre para modificar o crea un archivo autorun.sh |
 | `vi` | -- | ``|
 | `cat` | -- | ``|
 | `mkdir` | -- | ``|
