@@ -21,7 +21,7 @@ Para un mejor entendimiento se usará el siguiente marcado para los elementos ad
 | `ip {a/address}` | Permite mostrar la información de los adaptadores de red | `ip address` Muestra las direcciones IP de los adaptadores de red conectados. |
 | `clear` | Limpia la pantalla de la consola, lo cual elimina todas las salidas de comandos anteriores a clear y el uso de clear en la consola. | `clear` Limpia la consola |
 | `pwd` | Muestra la ruta actual en la que se encuentra la consola | `pwd` Imprime la Ubicación actual de la sesión de la consola |
-| `ls [-l\|a\|h] [directorio]` | Imprime los contenidos de la carpeta ingresada por parámetro. Si no se coloca parámetro imprime el contenido de la carpeta actual de la consola. Permite usar opciones que despliegan información adicional, filtran u ordenan los archivos listados | ``|
+| `ls [-l\|a\|h] [directorio]` | Imprime los contenidos de la carpeta ingresada por parámetro. Si no se coloca parámetro imprime el contenido de la carpeta actual de la consola. Permite usar opciones que despliegan información adicional, filtran u ordenan los archivos listados | `ls -a` Imprime los nombres de todos los archivos y directorios en la carpeta actual|
 | `man {command_name}` | Imprime el manual de usuario del comando ingresado por parámetro. Despliega tanto la documentación del comando o paquete como las opciones que tiene disponibles en cuanto argumentos u opciones del comando. | `man apt` Muestra el manual del comando apt |
 | `su [usuario]` | Permite ejecutar comandos como otro usuario diferente al de la sesión actual del sistema. Si no se le coloca el argumento de usuario cambiará por defecto al usuario root. | `su root` Pasa a ejecutar comandos como el super usuario (root) |
 | `passwd [usuario]` | Permite cambiar las contraseñas de los usuarios. Solo el super usuario puede cambiar las contraseñas de otros usuarios, en caso contrario se cambiará la contraseña del usuario en sesión | `passwd` Cambia la contraseña del usuario actual |
@@ -30,12 +30,12 @@ Para un mejor entendimiento se usará el siguiente marcado para los elementos ad
 | `nano [archivo]` | Es un paquete que permite la edición de archivos de texto plano por medio de la consola. Si se coloca un archivo por parámetro lo abre y carga el contenido para edición, si no existe o no se coloca un archivo como parametro crea uno nuevo. En caso que no se colocó el nombre del archivo en el parámetro, lo solicita para guardar al final de la edición | `nano autorun.sh` Abre para modificar o crea un archivo autorun.sh |
 | `vi` | Hace lo mismo que nano, pero más feo | `vi test.txt` Carga el archivo para editarlo. |
 | `cat` | Imprime el contenido de un archivo de texto plano en consola | `cat autorun.sh` Muestra el contenido del archivo autorun.sh sin ejecutarlo |
-| `mkdir` | -- | ``|
-| `cd [ruta]` | -- | ``|
-| `rm {archivo}` | -- | ``|
-| `cp {archivo_original} {ruta_copia}` | -- | ``|
-| `mv {ruta_original} {ruta_nueva}` | -- | ``|
-| `telnet` | -- | ``|
+| `mkdir {ruta_directorio}` | Crea un directorio en la ruta especificada. Si solo se coloca un nombre, se creará una carpeta con ese nombre en el directorio actual de la terminal | `mkdir Lab03` Crea una carpeta llamada Lab03 en la ruta actual de la terminal |
+| `cd [ruta]` | Mueve la ubicación actual de la terminal a la ruta especificada. La ruta puede ser el nombre de una carpeta en la ubicación actual o una ruta relativa como .. (carpeta arriba) o ~ (carpeta home del usuario). Si no se le coloca argumento de ruta, usa la ruta de la carpeta home del usuario actual por defecto | `cd Descargas` se mueve a la carpeta llamada Descargas del directorio actual |
+| `rm {archivo}` | Elimina el archivo que se encuentra en la ruta o con el nombre que recibe por parámetro si existe en la carpeta actual | `rm Descargas.rar` Borra el archivo comprimido Descargas.rar|
+| `cp {archivo_original} {ruta_copia}` | Copia el archivo de la ruta original a la del segundo argumento. En el segundo argumento se le puede colocar un nuevo nombre al archivo o se mantiene el mismo si solo se especifica un directorio | `cp Descargas/Curriculum.docx Documentos/` Copia el archivo Curriculum.docx de la carpeta Descargas a la carpeta Documentos |
+| `mv {ruta_original} {ruta_nueva}` | Mueve el archivo en la ruta del primer parámetro a la ubicación del segundo parámetro, ya sea cambiando o manteniendo el mismo nombre al igual que el comando cp | `mv Descargas/índice.png Imágenes/Fondo.png` Mueve el archivo índice.png de la carpeta Descargas a Imágenes y le cambia el nombre a Fondo.png |
+| `telnet [open] [host [puerto]]` | Comando para usar la herramienta de comunicación Telnet que permite probar conexiones y enviar datos entre equipos. Si se utiliza solo el comando telnet, abrirá una consola donde se pueden utilizar variedad de comandos como auth, display, open, close para manejar la comunicación con equipos. También se pueden utilizar directamente estas opciones al colocar la acción después del comando. Si se llama telnet con una dirección de dominio o IP, opcionalmente agregándole puerto, utilizará por defecto la acción open para crear una conexión con el equipo y enviar datos. | `telnet 192.168.0.25 22` Se conecta al puerto 22 del equipo con la IP 192.168.0.25 en la red local |
 | `top` | -- | ``|
 | `htop` | -- | ``|
 | `tree` | -- | ``|
