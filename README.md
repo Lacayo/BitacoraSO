@@ -43,7 +43,7 @@ Para un mejor entendimiento se usará el siguiente marcado para los elementos ad
 | `python3` | -- | ``|
 | `chmod` | -- | ``|
 | `dmidecode` | -- | ``|
-| `free` | -- | ``|
+| `free [-h\|b/k/m/g]` | | ``|
 | `swapon` | -- | ``|
 | `sysctl` | -- | ``|
 | `mount` | -- | ``|
