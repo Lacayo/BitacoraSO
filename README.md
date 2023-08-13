@@ -46,8 +46,8 @@ Para un mejor entendimiento se usará el siguiente marcado para los elementos ad
 | `free [-h\|b/k/m/g]` | Muestra la cantidad de RAM usada y disponible. Cuenta con opciones para mostrar las cantidades en números legibles para humanos y en unidades de bytes (b), kilobytes (k), megabytes (m), gigabytes (g), etc. | `free -hm` Muestra la cantidad de RAM en uso y disponible en números legibles por humanos en cantidades de Gigabytes |
 | `swapon [dispositivo]` | Especifica los dispositivos que se usarán para paginado y "swapping" de memoria. Si no se coloca el argumento de dispositivo muestra una lista con información de los dispositivos en uso | `swapon` Muestra los dispositivos en uso de paginación y "swapping" de memoria |
 | `sysctl` | Modifica parámetros del kernel en tiempo de ejecución | `sysctl -a` Lista los valores disponibles |
-| `mount` | -- | `` |
-| `scp` | -- | `` |
+| `mount [-t {tipo}] {dispositivo} {ruta_montaje}` | Agrega dispositivos de almacenamiento conectados al sistema de archivos. Esto lo puede realizar automáticamente el sistema operativo. Pero en algunos casos requiere hacerse de manera manual. La opción -t sirve para especificar el tipo de volumen (ext4, nfts, FAT32, etc.). El dispositivo corresponde al que se encuentra en la carpeta dev y ruta de montaje será la ruta de acceso a los archivos del dispositivo | `mount -t ext4 /dev/sda3 /mnt` Monta el dispositivo sda3 en la ruta /mnt con un sistema de archivos ext4 |
+| `scp [[usuario@ip]ruta_original] [[usuario@ip]ruta_destino]` | Copia archivos entre equipos en una red. Se requiere poseer credenciales o una llave para el usuario remoto, esta será solicitada al ejecutar el comando. | `scp file.txt vecino@10.10.0.2:/remote/directory` Copia el archivo file.txt a la ruta /remote/directory del equipo con la IP 10.10.0.2 con el usuario vecino |
 | `git` | -- | `` |
 | `grep` | -- | `` |
 | `find` | -- | `` |
