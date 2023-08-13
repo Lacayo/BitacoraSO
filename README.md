@@ -41,21 +41,21 @@ Para un mejor entendimiento se usará el siguiente marcado para los elementos ad
 | `tree [ruta]` | Lista los contenidos de una carpeta en forma de árbol. Por lo tanto si el directorio contiene otras carpetas, mostrará lo que contienen y si contienen más carpetas, lo hará recursivamente. Si no se le coloca el argumento de ruta tomará el directorio actual por defecto | `tree` Muestra en forma de árbol los conenidos de la carpeta actual |
 | `ps [-a/t\|u\|x]` | Muestra información de los procesos en ejecución, al momento de ejecutarse el comando (no se actualiza en tiempo real como top). Permite personalizar la información y los procesos que se despliegan. Por ejemplo, con la bandera a se muestran todos los procesos, mientras que con t se muestran solo los relacionados a la terminal en ejecución. Si el comando se ejecuta sin opciones ni banderas, seleccionará únicamente los procesos del usuario y terminal actual | `ps -aux` Muestra toda la información de todos los procesos|
 | `python3 [script]` | Ejecuta scripts escritos en el lenguaje de programación python. Si no se coloca la ruta o nombre de un script entra a una consola para ejecutar código python directamente | `python3 SO_S04_02_sumatoria_Simple.py` Ejecuta el archivo SO_S04_02_sumatoria_Simple.py |
-| `chmod {{a/u\|g\|o}{operacion}{r\|w\|x}/{octal}} {archivo}` | Cambia los permisos de un arhivo. Se puede realizar utilizando a o ugo para asignar permisos a todos o usuario, grupo u otros, respectivamente; agregándole la operación + o - para agregar o quitar permisos; después el permiso que se quiere agregar o quitar (read, write, execute) y finalmente el nombre del archivo en el siguiente argumento. Otra alternativa es colocar en el primer argumento un número octal correspondiente | ``|
-| `dmidecode` | -- | ``|
-| `free [-h\|b/k/m/g]` | | ``|
-| `swapon` | -- | ``|
-| `sysctl` | -- | ``|
-| `mount` | -- | ``|
-| `scp` | -- | ``|
-| `git` | -- | ``|
-| `grep` | -- | ``|
-| `find` | -- | ``|
-| `wget` | -- | ``|
-| `nmap` | -- | ``|
-| `nslookup` | -- | ``|
-| `zip` | -- | ``|
-| `unzip` | -- | ``|
+| `chmod {{a/u\|g\|o}{operacion}{r\|w\|x}/{octal}} {archivo}` | Cambia los permisos de un arhivo. Se puede realizar utilizando a o ugo para asignar permisos a todos o usuario, grupo u otros, respectivamente; agregándole la operación + o - para agregar o quitar permisos; después el permiso que se quiere agregar o quitar (read, write, execute) y finalmente el nombre del archivo en el siguiente argumento. Otra alternativa es colocar en el primer argumento un número octal correspondiente (ver tabla en https://github.com/Lacayo/BitacoraSO/blob/main/OctalTable.png) y en el otro argumento el nombre del archivo | `chmod 764 test.txt` Da todos los permisos al usuario; lectura y escritura al grupo; y solo lectura a otros sobre el archivo test.txt |
+| `dmidecode` | Herramienta para mostrar el DMI del sistema de manera leíble | `dmidecode` Muestra la información del DMI |
+| `free [-h\|b/k/m/g]` | Muestra la cantidad de RAM usada y disponible. Cuenta con opciones para mostrar las cantidades en números legibles para humanos y en unidades de bytes (b), kilobytes (k), megabytes (m), gigabytes (g), etc. | `free -hm` Muestra la cantidad de RAM en uso y disponible en números legibles por humanos en cantidades de Gigabytes |
+| `swapon [dispositivo]` | Especifica los dispositivos que se usarán para paginado y "swapping" de memoria. Si no se coloca el argumento de dispositivo muestra una lista con información de los dispositivos en uso | `swapon` Muestra los dispositivos en uso de paginación y "swapping" de memoria |
+| `sysctl` | Modifica parámetros del kernel en tiempo de ejecución | `sysctl -a` Lista los valores disponibles |
+| `mount` | -- | `` |
+| `scp` | -- | `` |
+| `git` | -- | `` |
+| `grep` | -- | `` |
+| `find` | -- | `` |
+| `wget` | -- | `` |
+| `nmap` | -- | `` |
+| `nslookup` | -- | `` |
+| `zip` | -- | `` |
+| `unzip` | -- | `` |
 | `curl [-X {GET/POST/DELETE}] [-P {puerto}] [-L]` | Herramienta para transferir datos hacia un servidor. Permite usar diferentes protocolos como HTTP, HTTPS, FTP, DICT, etc. Incluye una amplia variedad de opciones como elegir el puerto (-P), el método HTTP que se usará (-X) o incluso si debe ser sensible a que la dirección utilizada indique un cambio de url | `curl -L google.com` Obtiene los datos que devuelve la dirección de google.com admitiendo redireccionamiento de los recursos. |
 | `pacman {-D/Q/S[y] [paquete]/R}` | Comando correspondiente al administrador de paquetes de las distribuciones basadas en Arch Linux. Realiza operaciones como actualizar, instalar y desinstalar paquetes en la distribución | `sudo pacman -Sy` Actualiza la lista del paquetes del equipo |
 | `yay {-Y/B/P/G/W/S {paquete}}` | yay es un asistente de Pacman que permite instalar paquetes del Arch User Repository (AUR), por lo tanto tiene sus propias opciones, pero se extiende de Pacman como la operación -S para instalar paquetes. Por defecto si solo se usa `yay` usará la opción -Y | `sudo yay -S google-chrome` Instala el paquete de Google Chrome desde el AUR |
