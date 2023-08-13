@@ -64,3 +64,9 @@ Para un mejor entendimiento se usará el siguiente marcado para los elementos ad
 | `uname [-a/(s\|n\|r\|v\|m\|p)]` | Muestra cierta información del sistema como el nombre, version o release del kernel. La opción -a muestra todo, mientras que las otras corresponden a datos específicos | `uname -a` Muestra todos los datos del sistema disponibles en el comando |
 | `useradd [-m {nombre_usuario}] [-G {grupo}] [-p {clave}]` | Crea un usuario nuevo asignandole nombre, grupo y clave | `useradd -m pepe -G clients -p elpepe` Crea un nuevo usuario llamado pepe, asignado al grupo clients y con la clave elpepe |
 | `chown {usuario} {ruta}` | Cambia el usuario dueño de una carpeta o archivo | `chown pepe /home/admin/carpetapepe` Cambia el dueño de una carpeta ubicada en la carpeta home del usuario admin|
+
+## Docker
+
+Docker es una herramienta que permite el despliegue de aplicaciones por medio de contenedores o máquinas virtuales optimizadas para dar servicios, ahorrando recursos que se consumen en máquinas virtuales convencionales. Los comandos a continuación se ejecutan como parte del paquete Docker, por lo tanto deben incluirlo antes. Ejemplo: `docker images`. Por lo tanto se omitirá colocarlo en cada comando de la lista para evitar redundancia.
+
+| `pull {imagen}` | -- | `` |
