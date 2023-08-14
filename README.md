@@ -69,6 +69,8 @@ Para un mejor entendimiento se usará el siguiente marcado para los elementos ad
 
 Docker es una herramienta que permite el despliegue de aplicaciones por medio de contenedores o máquinas virtuales optimizadas para dar servicios, ahorrando recursos que se consumen en máquinas virtuales convencionales. Los comandos a continuación se ejecutan como parte del paquete Docker, por lo tanto deben incluirlo antes. Ejemplo: `docker images`. Por lo tanto se omitirá colocarlo en cada comando de la lista para evitar redundancia.
 
+| Comando | Descripción | Ejemplo de uso |
+|--|--|--|
 | `pull {imagen}` | Descarga la imagen especificada | `pull ubuntu` Descarga la imagen ubuntu |
 | `images` | Muestra la lista de imágenes descargadas | `images` Hace lo que dice la celda anterior |
 | `run [-it] [--name {nombre}] {imagen}` | Crea un contenedor de una imagen descargada. Se puede indicar que sea interactiva (-it, permite utilizar la línea de comando dentro de la imagen. Esto está desactivado por defecto y solo se crean las imágenes para dar servicios) y colocarle un nombre porque por defecto se le colocan cosas random | `run -it ubuntu --name whateva` |
