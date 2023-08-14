@@ -70,3 +70,9 @@ Para un mejor entendimiento se usará el siguiente marcado para los elementos ad
 Docker es una herramienta que permite el despliegue de aplicaciones por medio de contenedores o máquinas virtuales optimizadas para dar servicios, ahorrando recursos que se consumen en máquinas virtuales convencionales. Los comandos a continuación se ejecutan como parte del paquete Docker, por lo tanto deben incluirlo antes. Ejemplo: `docker images`. Por lo tanto se omitirá colocarlo en cada comando de la lista para evitar redundancia.
 
 | `pull {imagen}` | -- | `` |
+| `images` | -- | `` |
+| `run {imagen}` | -- | `` |
+| `stop {imagen}` | -- | `` |
+| `start {imagen}` | -- | `` |
+| `ps [-a]` | -- | `` |
+| `attach {contenedor}` | -- | `` |
