@@ -60,7 +60,7 @@ Para un mejor entendimiento se usará el siguiente marcado para los elementos ad
 | `pacman {-D/Q/S[y] [paquete]/R}` | Comando correspondiente al administrador de paquetes de las distribuciones basadas en Arch Linux. Realiza operaciones como actualizar, instalar y desinstalar paquetes en la distribución | `sudo pacman -Sy` Actualiza la lista del paquetes del equipo |
 | `yay {-Y/B/P/G/W/S {paquete}}` | yay es un asistente de Pacman que permite instalar paquetes del Arch User Repository (AUR), por lo tanto tiene sus propias opciones, pero se extiende de Pacman como la operación -S para instalar paquetes. Por defecto si solo se usa `yay` usará la opción -Y | `sudo yay -S google-chrome` Instala el paquete de Google Chrome desde el AUR |
 | `systemctl {status/start/stop} {servicio}` | Este comando funciona para administrar los servicios del sistema operativo con operaciones para iniciar (start), detener (stop) o verificar el estado (status), entre otras. | `sudo systemctl start httpd` Inicia el servicio de Apache que muestra una página en localhost |
-| `{comando_con_salida} > {ruta_archivo}` | -- | ``|
+| `{comando_con_salida} > {ruta_archivo}` | Utiliza el output que imprime un comando como la entrada del segundo argumento, o bien lo escribe sobre un archivo cuya ruta se especifique en ese argumento | ``|
 | `uname [-a/(s\|n\|r\|v\|m\|p)]` | Muestra cierta información del sistema como el nombre, version o release del kernel. La opción -a muestra todo, mientras que las otras corresponden a datos específicos | `uname -a` Muestra todos los datos del sistema disponibles en el comando |
 | `useradd [-m {nombre_usuario}] [-G {grupo}] [-p {clave}]` | Crea un usuario nuevo asignandole nombre, grupo y clave | `useradd -m pepe -G clients -p elpepe` Crea un nuevo usuario llamado pepe, asignado al grupo clients y con la clave elpepe |
 | `chown {usuario} {ruta}` | Cambia el usuario dueño de una carpeta o archivo | `chown pepe /home/admin/carpetapepe` Cambia el dueño de una carpeta ubicada en la carpeta home del usuario admin|
@@ -69,10 +69,11 @@ Para un mejor entendimiento se usará el siguiente marcado para los elementos ad
 
 Docker es una herramienta que permite el despliegue de aplicaciones por medio de contenedores o máquinas virtuales optimizadas para dar servicios, ahorrando recursos que se consumen en máquinas virtuales convencionales. Los comandos a continuación se ejecutan como parte del paquete Docker, por lo tanto deben incluirlo antes. Ejemplo: `docker images`. Por lo tanto se omitirá colocarlo en cada comando de la lista para evitar redundancia.
 
-| `pull {imagen}` | -- | `` |
-| `images` | -- | `` |
-| `run {imagen}` | -- | `` |
-| `stop {imagen}` | -- | `` |
-| `start {imagen}` | -- | `` |
-| `ps [-a]` | -- | `` |
-| `attach {contenedor}` | -- | `` |
+| `pull {imagen}` | Descarga la imagen especificada | `pull ubuntu` Descarga la imagen ubuntu |
+| `images` | Muestra la lista de imágenes descargadas | `images` Hace lo que dice la celda anterior |
+| `run [-it] [--name {nombre}] {imagen}` | Crea un contenedor de una imagen descargada. Se puede indicar que sea interactiva (-it, permite utilizar la línea de comando dentro de la imagen. Esto está desactivado por defecto y solo se crean las imágenes para dar servicios) y colocarle un nombre porque por defecto se le colocan cosas random | `run -it ubuntu --name whateva` |
+| `stop {contendor}^n` | Detiene el o los contenedores especificados. Deben llamarse por el nombre random o asignado | `stop whateva` Detiene el contenedor whateva |
+| `start {contenedor}^n` | Inicia el o los contenedores especificados. Deben llamarse por el nombre random o asignado | `start whateva` Inicia el contenedor whateva |
+| `attach {contenedor}` | Entra a la línea de comandos del contenedor especificado. Debe ser un contenedor interactivo. | `attach whateva` Entra a la línea de comandos del contenedor whateva |
+| `ps [-a]` | Muestra una lista de los contenedores creados. Con la opción -a muestra todos los contenedores, incluso los detenidos. El comando a secas solo muestra lo que le da la gana | `ps -a` |
+
